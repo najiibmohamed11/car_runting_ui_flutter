@@ -66,48 +66,14 @@ class _BookpageState extends State<Bookpage> {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          width: 90, // specify the width as needed
-                          height: 30, // specify the height as needed
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                                15), // set the border radius
-                            border: Border.all(
-                                color: const Color.fromRGBO(233, 171, 55,
-                                    1)), // add a border (optional)
-                            color: Colors
-                                .transparent, // set the fill color as transparent
-                          ),
-                          child: Center(
-                            child: Text(
-                              "SUV Car",
-                              style: TextStyle(
-                                  color: Color.fromRGBO(233, 171, 55, 1)),
-                            ),
-                          ),
+                        roundedcontainer(
+                          text: "suv car",
                         ),
                         SizedBox(
                           width: 20.0,
                         ),
-                        Container(
-                          width: 90, // specify the width as needed
-                          height: 30, // specify the height as needed
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                                15), // set the border radius
-                            border: Border.all(
-                                color: const Color.fromRGBO(233, 171, 55,
-                                    1)), // add a border (optional)
-                            color: Colors
-                                .transparent, // set the fill color as transparent
-                          ),
-                          child: Center(
-                            child: Text(
-                              "off road",
-                              style: TextStyle(
-                                  color: Color.fromRGBO(233, 171, 55, 1)),
-                            ),
-                          ),
+                        roundedcontainer(
+                          text: "off road",
                         ),
                         Spacer(),
                         Image.asset("images/lamborghini.png")
@@ -137,144 +103,18 @@ class _BookpageState extends State<Bookpage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Container(
-                              width: 120.0,
-                              height: 120.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Color(0xff282F36),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 25.0, left: 15.0),
-                                    child: Text(
-                                      "capacity",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18.0),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15.0),
-                                    child: Text(
-                                      "4 Site",
-                                      style: TextStyle(
-                                        color: Color(0xffE9AB37),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                              top: -50,
-                              left: 8,
-                              child: Container(
-                                width: 100.0,
-                                height: 100.0,
-                                child: Image.asset("images/chairs.png"),
-                              ),
-                            )
-                          ],
-                        ),
-                        Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Container(
-                              width: 120.0,
-                              height: 120.0,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  color: Color(0xff282F36)),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 25.0, left: 15.0),
-                                    child: Text(
-                                      "Max Speed",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18.0),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15.0),
-                                    child: Text(
-                                      "265 KM/h",
-                                      style: TextStyle(
-                                        color: Color(0xffE9AB37),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                              top: -50,
-                              left: 8,
-                              child: Container(
-                                width: 100.0,
-                                height: 100.0,
-                                child: Image.asset("images/mator.png"),
-                              ),
-                            )
-                          ],
-                        ),
-                        Stack(
-                          clipBehavior: Clip.none,
-                          children: [
-                            Container(
-                              width: 120.0,
-                              height: 120.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Color(0xff282F36),
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        top: 25.0, left: 15.0),
-                                    child: Text(
-                                      "engin power",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 18.0),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 15.0),
-                                    child: Text(
-                                      "580 HP",
-                                      style: TextStyle(
-                                        color: Color(0xffE9AB37),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Positioned(
-                              top: -50,
-                              left: 8,
-                              child: Container(
-                                width: 100.0,
-                                height: 100.0,
-                                child:
-                                    Image.asset("images/powr of the motor.png"),
-                              ),
-                            )
-                          ],
-                        ),
+                        vuturescontainer(
+                            image_path: "images/chairs.png",
+                            titile: "capacity",
+                            subtitile: "4 site"),
+                        vuturescontainer(
+                            image_path: "images/mator.png",
+                            titile: "Max Speed",
+                            subtitile: "265 KM/h"),
+                        vuturescontainer(
+                            image_path: "images/powr of the motor.png",
+                            titile: "engin power",
+                            subtitile: "580 HP"),
                       ],
                     ),
                     Container(
@@ -321,6 +161,87 @@ class _BookpageState extends State<Bookpage> {
               ),
             )
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class vuturescontainer extends StatelessWidget {
+  vuturescontainer({this.image_path, this.titile, this.subtitile});
+  String? image_path;
+  String? titile;
+  String? subtitile;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          width: 120.0,
+          height: 120.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.0),
+            color: Color(0xff282F36),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 25.0, left: 15.0),
+                child: Text(
+                  titile!,
+                  style: TextStyle(color: Colors.white, fontSize: 18.0),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: Text(
+                  subtitile!,
+                  style: TextStyle(
+                    color: Color(0xffE9AB37),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          top: -50,
+          left: 8,
+          child: Container(
+            width: 100.0,
+            height: 100.0,
+            child: Image.asset(image_path!),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class roundedcontainer extends StatelessWidget {
+  roundedcontainer({@required this.text});
+  String? text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 90, // specify the width as needed
+      height: 30, // specify the height as needed
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15), // set the border radius
+        border: Border.all(
+            color: const Color.fromRGBO(
+                233, 171, 55, 1)), // add a border (optional)
+        color: Colors.transparent, // set the fill color as transparent
+      ),
+      child: Center(
+        child: Text(
+          text!,
+          style: TextStyle(color: Color.fromRGBO(233, 171, 55, 1)),
         ),
       ),
     );

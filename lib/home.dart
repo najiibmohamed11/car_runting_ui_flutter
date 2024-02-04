@@ -154,124 +154,32 @@ class _HomeState extends State<Home> {
                       width: 50.0,
                       child: Image.asset("images/dash.png"),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            "Top Brands",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(right: 25.0),
-                          width: 80.0,
-                          height: 30.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            color: Color(0xff282F36),
-                          ),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  "More",
-                                  style: TextStyle(
-                                    color: Color(0xffE9AB37),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xffE9AB37),
-                                )
-                              ]),
-                        )
-                      ],
+
+                    ///TODO TOPICS TOP BRAND
+                    allmore(
+                      topic: "Top brand",
                     ),
                     Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                                left: 10.0, right: 25.0, top: 20.0),
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0xff282F36),
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Image.asset("images/BMW.png"),
-                          ),
+                        //TODO BRAND IMAGES
+                        BrandContainer(
+                          imagepath: "images/BMW.png",
                         ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                                left: 10.0, right: 25.0, top: 20.0),
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0xff282F36),
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Image.asset("images/mercedes.png"),
-                          ),
+                        BrandContainer(
+                          imagepath: "images/mercedes.png",
                         ),
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(
-                                left: 10.0, right: 25.0, top: 20.0),
-                            height: 100,
-                            decoration: BoxDecoration(
-                              color: Color(0xff282F36),
-                              borderRadius: BorderRadius.circular(20.0),
-                            ),
-                            child: Image.asset("images/lamborghini.png"),
-                          ),
+                        BrandContainer(
+                          imagepath: "images/lamborghini.png",
                         ),
                       ],
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
-                          child: Text(
-                            "Recommendations",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(right: 25.0),
-                          width: 80.0,
-                          height: 30.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            color: Color(0xff282F36),
-                          ),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  "More",
-                                  style: TextStyle(
-                                    color: Color(0xffE9AB37),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  color: Color(0xffE9AB37),
-                                )
-                              ]),
-                        )
-                      ],
+
+                    ///TODO TOPICS RECOMMENDATION
+                    allmore(
+                      topic: "Recommendations",
                     ),
                     SizedBox(
                       height: 30.0,
@@ -279,118 +187,29 @@ class _HomeState extends State<Home> {
 
                     Row(
                       children: [
-                        Expanded(
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return Bookpage();
-                                }),
-                              );
-                            },
-                            child: Stack(
-                              clipBehavior: Clip.none,
-                              children: [
-                                Container(
-                                  margin:
-                                      EdgeInsets.only(right: 10.0, left: 22.0),
-                                  height: 110.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff282F36),
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                ),
-                                Positioned(
-                                  top: -50,
-                                  left: 20.0,
-                                  child: Container(
-                                    width: 150.0,
-                                    height: 130.0,
-                                    child: Image.asset("images/lampo.png"),
-                                  ),
-                                ),
-                                Positioned(
-                                  bottom: 10.0,
-                                  left: 35.0,
-                                  child: Container(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "lamborghini urus",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                        Text(
-                                          "\$520/day",
-                                          style: TextStyle(
-                                            color: Color(0xffE9AB37),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                        recommendationcondition(
+                          image_path: "images/lampo.png",
+                          cont_leftmarging: 10.0,
+                          cont_rightmargin: 22.0,
+                          image_position_left: 20.0,
+                          width: 150.0,
+                          height: 130.0,
+                          text_position_left: 35.0,
+                          text_position_bottom: 10.0,
+                          title: "tesla cyber truck",
+                          subtitle: "\$520/day",
                         ),
-                        Expanded(
-                          child: InkWell(
-                            onTap: () {},
-                            child: Stack(
-                              clipBehavior: Clip.none,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.only(right: 25.0),
-                                  height: 110.0,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xff282F36),
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                ),
-                                Positioned(
-                                  top: -50,
-                                  left: -30,
-                                  child: Container(
-                                    width: 190.0,
-                                    height: 100.0,
-                                    child:
-                                        Image.asset("images/cybertruck1.png"),
-                                  ),
-                                ),
-                                Positioned(
-                                  bottom: 10.0,
-                                  left: 15.0,
-                                  child: Container(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          "Cyber Truck",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20.0,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                        Text(
-                                          "\$500/day",
-                                          style: TextStyle(
-                                            color: Color(0xffE9AB37),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
+                        recommendationcondition(
+                          image_path: "images/cybertruck1.png",
+                          cont_leftmarging: 0.0,
+                          cont_rightmargin: 25.0,
+                          image_position_left: -30,
+                          width: 190.0,
+                          height: 100.0,
+                          text_position_left: 15.0,
+                          text_position_bottom: 10.0,
+                          title: "lamborghini urus",
+                          subtitle: "\$520/day",
                         ),
                       ],
                     ),
@@ -404,6 +223,159 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class recommendationcondition extends StatelessWidget {
+  recommendationcondition(
+      {this.cont_rightmargin,
+      this.cont_leftmarging,
+      this.height,
+      this.image_path,
+      this.image_position_left,
+      this.subtitle,
+      this.text_position_left,
+      this.text_position_bottom,
+      this.title,
+      this.width});
+  double? cont_rightmargin;
+  double? cont_leftmarging;
+  double? image_position_left;
+  double? text_position_bottom;
+  double? text_position_left;
+  double? width;
+  double? height;
+  String? image_path;
+  String? title;
+  String? subtitle;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) {
+              return Bookpage();
+            }),
+          );
+        },
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              margin: EdgeInsets.only(
+                  right: cont_rightmargin!, left: cont_leftmarging!),
+              height: 110.0,
+              decoration: BoxDecoration(
+                color: Color(0xff282F36),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+            ),
+            Positioned(
+              top: -50,
+              left: image_position_left,
+              child: Container(
+                width: width,
+                height: height,
+                child: Image.asset(image_path!),
+              ),
+            ),
+            Positioned(
+              bottom: text_position_bottom,
+              left: text_position_left,
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "lamborghini urus",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      "\$520/day",
+                      style: TextStyle(
+                        color: Color(0xffE9AB37),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class BrandContainer extends StatelessWidget {
+  BrandContainer({@required this.imagepath});
+  String? imagepath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        margin: EdgeInsets.only(left: 10.0, right: 25.0, top: 20.0),
+        height: 100,
+        decoration: BoxDecoration(
+          color: Color(0xff282F36),
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Image.asset(imagepath!),
+      ),
+    );
+  }
+}
+
+class allmore extends StatelessWidget {
+  allmore({@required this.topic});
+  String? topic;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: Text(
+            topic!,
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(right: 25.0),
+          width: 80.0,
+          height: 30.0,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0),
+            color: Color(0xff282F36),
+          ),
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+            Text(
+              "More",
+              style: TextStyle(
+                color: Color(0xffE9AB37),
+              ),
+            ),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Color(0xffE9AB37),
+            )
+          ]),
+        )
+      ],
     );
   }
 }
